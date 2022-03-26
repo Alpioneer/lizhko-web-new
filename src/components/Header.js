@@ -1,26 +1,44 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import styled from 'styled-components';
+import TemporaryDrawer from './TemporaryDrawer';
+
+
+
 
 export default function Header() {
 
-  
+  const Box= styled.div`
+
+  width:100vw;
+  height:5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:black;
+  z-index:0;
+  background-color:red;
+ 
+  `
+
+  const HNode=styled.div`
+
+  width:40px;
+  height:40px;
+  background-color:yellow;
+  z-index:1;
+  position:relative;
+  `
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Photos
-          </Typography>
-        </Toolbar>
-      </AppBar>
+
+    <>
+    <Box>
+  <HNode>text</HNode>
+  <TemporaryDrawer></TemporaryDrawer>
+
+  
     </Box>
+   
+    </>
   );
 }

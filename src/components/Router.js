@@ -1,7 +1,9 @@
 import React from "react";
-import { HashRouter as Router,Route,Routes} from "react-router-dom";
-import Header from "components/Header"
-
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from "routes/Home";
 
 
 
@@ -11,14 +13,14 @@ const AppRouter = () => {
 
         <>
 
-        <Router>
+    <Home/>
 
     <Routes>
 
+    <Route path="/"/>
 
-        
-   </Routes>
-        </Router>
+    </Routes>
+ 
 
         </>
     )
