@@ -5,6 +5,7 @@ import Drawer from './Drawer';
 
 
 
+
 export default function Header() {
 
 
@@ -24,14 +25,16 @@ export default function Header() {
 
   const Box= styled.div`
 
-  width:100vw;
-  height:5vh;
+  width:100v%;
+  border:1px solid blue;
+  padding:0 60px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color:black;
   z-index:0;
-  background-color:red;
+  background-color:none;
  
   `
 
@@ -49,7 +52,11 @@ export default function Header() {
 
     <>
     <Box>
-  <HNode>text</HNode>
+   
+        <img src="lizhko_logo"/>
+  
+
+
   <HNode onClick={()=>{menuClick(opentype)}}>
     <Drawer opacity={opacity}/>
   </HNode>

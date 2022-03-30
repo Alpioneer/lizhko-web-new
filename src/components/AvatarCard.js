@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import TextOne from "./TextOne";
+import TextRegular from "./TextRegular";
+import TextTwo from "./TextTwo";
 
 
 
@@ -9,44 +12,45 @@ const AvatarCard = (props) => {
 
 
     const BG=styled.section`
-    width:100vw%;
-  
+
     display:flex;
-    padding:10%;
-    height:40vh;
+    height:auto;
+    padding:10vw 10vw;
+    border:1px solid red;
     align-items:center;
+    justify-content:center;
+    flex-direction:${props.left?'row':'row-reverse'}
     
     `
 
-    const Left=styled.div`
+    const InfoAvatar=styled.div`
     width:50%;
-    border:1px solid black;
     padding:5%;
-    height:100%;
-    z-index:-5;
-    opacity:0.5;
+    border:1px solid black;
+    background-color:white;
+    z-index:1;
+    flex-direction: column;
+    color:blue;
     `
 
-    const Right=styled.div`
-
-    width:50%;
-    height:100%;
-    border:1px solid red;
-    background-color: brown;
-    z-index:5;
-    right:10%;
+    const InfoPic=styled.div`
+   width:400px;
+   height:400px;
+   min-width:400px;
+    border:1px solid blue;
     opacity:0.3;
     position:relative;
-
-    
+    background-color:blue;
+    ${props.left? 'right:3%' : 'left:3%'}
     `
+
 
     return (
       <>
 
       <BG props>
-      <Left>{props.name}{props.desc}{props.title}</Left>
-      <Right></Right>
+      <InfoAvatar><TextOne text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/></InfoAvatar>
+      <InfoPic/>
       </BG>
 
 

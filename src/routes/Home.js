@@ -5,7 +5,6 @@ import styled from "styled-components";
 const Home =()=>{
 
     const Banner=styled.div`
-    
     width:100vw;
     height:40vh;
     background-color:blue;

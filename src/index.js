@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 const GlobalStyle = createGlobalStyle`
 
 body {
+  width:100%;
+  overflow:none;
 
   margin:0;
   padding:0;
