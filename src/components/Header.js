@@ -2,7 +2,7 @@ import  React  from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Drawer from './Drawer';
-
+import { ReactComponent as Lizhko} from '../images/brick.svg'
 
 
 
@@ -52,10 +52,10 @@ export default function Header() {
 
     <>
     <Box>
-   
-        <img src="lizhko_logo"/>
-  
 
+      <HNode><Lizhko/></HNode>
+   
+  
 
   <HNode onClick={()=>{menuClick(opentype)}}>
     <Drawer opacity={opacity}/>
