@@ -1,11 +1,26 @@
-import * as React from 'react';
+import  React  from 'react';
 import styled from 'styled-components';
-import TemporaryDrawer from './TemporaryDrawer';
-
+import { useState } from 'react';
+import Drawer from './Drawer';
 
 
 
 export default function Header() {
+
+
+  const [opentype,setOpentype] = useState(false);
+  const [opacity,setOpacity] =useState(0);
+
+
+  console.log(opacity)
+
+  const menuClick = (opentype,opacity) =>{
+   opentype? opacity=0 : opacity=1
+   setOpentype(!opentype);
+   setOpacity(opacity);
+
+  };
+
 
   const Box= styled.div`
 
@@ -29,14 +44,15 @@ export default function Header() {
   position:relative;
   `
 
+
   return (
 
     <>
     <Box>
   <HNode>text</HNode>
-  <TemporaryDrawer></TemporaryDrawer>
-
-  
+  <HNode onClick={()=>{menuClick(opentype)}}>
+    <Drawer opacity={opacity}/>
+  </HNode>
     </Box>
    
     </>

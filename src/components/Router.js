@@ -3,25 +3,28 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Gallery from "routes/Gallery";
 import Home from "routes/Home";
-
+import Members from "routes/Members";
+import Works from "routes/Works";
+import About from "routes/About";
+import Blog from "routes/Blog";
 
 
 const AppRouter = () => {
 
     return(
-
         <>
-
-    <Home/>
-
     <Routes>
-
-    <Route path="/"/>
+    <Route exact path="/" element={<Home/>}/>
+    <Route exact path="/memebers" element={<Members/>}/>
+    <Route exact path="/Works" element={<Works/>}/>
+    <Route exact path="/About" element={<About/>}/>
+    <Route exact path="/Blog" element={<Blog/>}/>
+    <Route exact path="/Gallery" element={<Gallery/>}></Route>
 
     </Routes>
  
-
         </>
     )
 
