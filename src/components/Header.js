@@ -1,24 +1,33 @@
 import  React  from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
-import Drawer from './Drawer';
 import { ReactComponent as Lizhko} from '../images/brick.svg'
+import { ReactComponent as MenuIC } from '../images/menuIC.svg'
+
+
+export default function Header(props) {
+
+
+  console.log("in header props >>>" , props)
 
 
 
-export default function Header() {
 
 
   const [opentype,setOpentype] = useState(false);
   const [opacity,setOpacity] =useState(0);
 
 
-  console.log(opacity)
-
   const menuClick = (opentype,opacity) =>{
-   opentype? opacity=0 : opacity=1
+
+
+   opentype? opacity=0 : opacity=0.9
    setOpentype(!opentype);
    setOpacity(opacity);
+
+   
+
+   console.log("in header opacity >>>", opacity)
 
   };
 
@@ -26,7 +35,6 @@ export default function Header() {
   const Box= styled.div`
 
   width:100v%;
-  border:1px solid blue;
   padding:0 60px;
   height: 60px;
   display: flex;
@@ -40,11 +48,13 @@ export default function Header() {
 
   const HNode=styled.div`
 
-  width:40px;
+ width:80px;
   height:40px;
-  background-color:yellow;
   z-index:1;
   position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   `
 
 
@@ -54,11 +64,8 @@ export default function Header() {
     <Box>
 
       <HNode><Lizhko/></HNode>
-   
-  
-
   <HNode onClick={()=>{menuClick(opentype)}}>
-    <Drawer opacity={opacity}/>
+    <MenuIC width="30px"/>
   </HNode>
     </Box>
    

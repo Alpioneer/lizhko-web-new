@@ -8,6 +8,10 @@ import Home from "routes/Home";
 const Drawer = (props) => {
 
 
+   console.log(props)
+    console.log("in drawer opacity >>>" , props.opacity)
+
+
     const DrawerBG= styled.div`
     width:20vw;
     height:400px;
