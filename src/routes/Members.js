@@ -15,7 +15,7 @@ const Members =()=>{
 
     const TitleType=styled.h1`
 
-    padding: 160px 20vw 120px 20vw;
+    padding: 160px 15vw 120px 15vw;
     color: #444852;
     font-size: 1.8em;
     font-weight:200;
@@ -36,6 +36,13 @@ const Members =()=>{
  <AvatarCard right title={"Director"} name={"Daeyeon Kim"} desc={"리즈코의 디렉터 김대연입니다."}/>
  <AvatarCard left title={"Director"} name={"Daeyeon Kim"} desc={"리즈코의 디렉터 김대연입니다."}/>
  <AvatarCard right title={"Director"} name={"Daeyeon Kim"} desc={"리즈코의 디렉터 김대연입니다."}/>
+
+ <TitleType>우리도 어디까지가 스스로의 끝인지 아직 알 수 없습니다. 우리는 리즈코를 세상 밖으로 알리고 싶습니다.
+리즈코가 어떠한 가치를 만들지, 스스로를 지켜보고 싶습니다.
+
+리즈코는 서로를 이해하며 현재를 즐깁니다.  우리 또한 만들어낼 가치의 끝이 어딘지가 궁금합니다.
+감상적인 자세를 비즈니스에 더하고 싶습니다. 그러기에 우리는 오늘도 세상 밖으로 더 한 걸음 나아갈 수 있습니다. 
+</TitleType>
 
  </Container>
         </>
