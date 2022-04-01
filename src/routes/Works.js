@@ -4,15 +4,20 @@ import styled from "styled-components";
 
 const Works =()=>{
 
-    const Null=styled.div`
+    const Container = styled.div`
 
 
+
+    width:100%;
+    height:400px;
+    border:1px solid red;
+    
+    
     `
     return(
 
         <>
-     여기는 Works
-
+    <Container>여기는 Works;</Container>
  
         </>
     )

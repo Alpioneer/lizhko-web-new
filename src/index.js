@@ -7,19 +7,23 @@ import { BrowserRouter } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
 
-body {
-  width:100%;
-  overflow:none;
 
+html {
+  cursor: url(https://static.cargo.site/images/up.png), auto !important;
+}
+
+body {
+
+  width:100vw;
+  overflow:none;
   margin:0;
   padding:0;
   display:flex;
   justify-content:center;
-
+  box-sizing:border-box;
 
 }
 `
-
 
 
 
@@ -29,7 +33,6 @@ ReactDOM.render(
     <GlobalStyle/>
     <App />
     </BrowserRouter>
-  
   </React.StrictMode>,
   document.getElementById('root')
 );

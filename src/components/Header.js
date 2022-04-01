@@ -3,45 +3,38 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { ReactComponent as Lizhko} from '../images/brick.svg'
 import { ReactComponent as MenuIC } from '../images/menuIC.svg'
+import { CatchingPokemonSharp } from '@mui/icons-material';
 
 
 export default function Header(props) {
 
-
-  console.log("in header props >>>" , props)
-
-
-
-
+  console.log("hello")
 
   const [opentype,setOpentype] = useState(false);
-  const [opacity,setOpacity] =useState(0);
+  const [opacity,setOpacity] = useState(0);
 
 
   const menuClick = (opentype,opacity) =>{
 
-
-   opentype? opacity=0 : opacity=0.9
+  opentype? opacity=0 : opacity=0.9
    setOpentype(!opentype);
-   setOpacity(opacity);
-
-   
-
-   console.log("in header opacity >>>", opacity)
+   setOpacity(opacity)
+   props.getOpacity(opacity);
+   console.log("click2")
 
   };
 
 
   const Box= styled.div`
-
-  width:100v%;
   padding:0 60px;
+  box-sizing:border-box;
+  width:100vw;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color:black;
-  z-index:0;
+  z-index:5;
   background-color:none;
  
   `
@@ -51,9 +44,11 @@ export default function Header(props) {
  width:80px;
   height:40px;
   z-index:1;
+
   position:relative;
   display:flex;
   align-items:center;
+
   justify-content:center;
   `
 
@@ -62,10 +57,9 @@ export default function Header(props) {
 
     <>
     <Box>
-
-      <HNode><Lizhko/></HNode>
-  <HNode onClick={()=>{menuClick(opentype)}}>
-    <MenuIC width="30px"/>
+      <HNode><Lizhko onClick={()=>{console.log("click")}}/></HNode>
+  <HNode onClick={()=>{menuClick(opentype,opacity)}}>
+    <MenuIC width="20px"/>
   </HNode>
     </Box>
    
