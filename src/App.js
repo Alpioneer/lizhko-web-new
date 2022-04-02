@@ -7,20 +7,24 @@ import Drawer from 'components/Drawer';
 
 function App() {
  
-
   const [opacity,setOpacity] =useState(0);
+  const [opentype,setOpentype] =useState(false);
 
-  const getOpacity=(num)=>{
-    setOpacity(num)
 
+  console.log("in app , opentype" , opentype)
+
+  const getStatus=(num,type)=>{
+    setOpacity(num);
+    setOpentype(type);
   }
 
+// ㄴㄷㅅ
   return (
     <>
 
 
-<Header getOpacity={getOpacity}/>
-<Drawer opacity={opacity}/>
+<Header getStatus={getStatus}/>
+<Drawer opacity={opacity} opentype={opentype}/>
 <AppRouter/>
 <Footer/>
     </>

@@ -4,9 +4,21 @@ import {Link} from "react-router-dom"
 
 const Drawer = (props) => {
 
-    console.log("hello Drawer")
+  console.log("in Drawer",props.opentype)
+  let screenLog = document.querySelector('#screen-log');
+document.addEventListener('mousemove', logKey);
+
+function logKey(e) {
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
+}
+
+
+
 
     const DrawerBG= styled.div`
+
     width:20vw;
     height:100vh;
     background-color:white;
@@ -18,7 +30,10 @@ const Drawer = (props) => {
     color:black;
     opacity:${props.opacity};
     font-size:2rem;
+    
     `
+
+
 
 
     const DrawerUL=styled.ul`
@@ -43,6 +58,7 @@ const Drawer = (props) => {
     `
     
     return (
+      
       <>
       <DrawerBG props>
       <DrawerUL>
