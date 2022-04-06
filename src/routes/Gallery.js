@@ -18,7 +18,7 @@ const Gallery =()=>{
     return(
 
         <>
-    <Container>Galler</Container>
+    <Container>Gallery</Container>
  
  
         </>

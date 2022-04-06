@@ -1,20 +1,40 @@
-import React from "react";
+import React ,{useRef} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
+import { Mouse } from "@mui/icons-material";
 
-const Drawer = (props) => {
+const Drawer = (props,event) => {
 
   console.log("in Drawer",props.opentype)
-  let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
-
-function logKey(e) {
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
-}
 
 
+
+  const drawerTarget=useRef(null);
+
+
+  const d = document;
+
+  d.addEventListener('click', event)
+
+
+  d.onclick=(event)=>{
+    console.log("클릭 됌 & what event is  >>>>" , event)
+  }
+
+
+
+  const listenrTest=()=>{
+
+
+  }
+
+  const drawerOut = () =>{
+
+  //(click===!drawerTarget.current) && opentype===true ? display none : 
+
+
+
+  }
 
 
     const DrawerBG= styled.div`
@@ -60,7 +80,7 @@ function logKey(e) {
     return (
       
       <>
-      <DrawerBG props>
+      <DrawerBG props ref={drawerTarget}>
       <DrawerUL>
           <DrawerLI><Link to="/">Home</Link></DrawerLI>
           <DrawerLI><Link to="/Memebers">Memebers</Link></DrawerLI>
