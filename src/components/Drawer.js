@@ -1,41 +1,57 @@
-import React ,{useRef} from "react";
+import React ,{useRef,useState} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
 import { Mouse } from "@mui/icons-material";
 
 const Drawer = (props,event) => {
 
-  console.log("in Drawer",props.opentype)
-
-
+  const [drOpentype,setdrOpentype]=useState(props.opentype);
 
   const drawerTarget=useRef(null);
 
-
   const d = document;
 
-  d.addEventListener('click', event)
+  //type 1//
+  const drawerClick=(event)=>{
 
+    console.log(event)
+
+    if(event.target===drawerTarget.current){
+      
+   
+
+      console.log("clicked drawer")
+
+    }else{
+
+      console.log("not clicked drawer");
+
+    }
+  }
+
+  d.addEventListener('click',drawerClick);
+
+
+  ///type 2///
+
+  /*
 
   d.onclick=(event)=>{
-    console.log("클릭 됌 & what event is  >>>>" , event)
-  }
 
+    if(event.target===drawerTarget.current){
+      console.log("it s drawer")
 
-
-  const listenrTest=()=>{
-
-
-  }
-
-  const drawerOut = () =>{
-
-  //(click===!drawerTarget.current) && opentype===true ? display none : 
-
-
+    }else{
+      console.log("not drawer")
+      console.log("before dr",drOpentype);
+      setdrOpentype(true);
+      console.log("dr now?",drOpentype);
+    
+    }
 
   }
 
+  */
 
     const DrawerBG= styled.div`
 
@@ -50,6 +66,7 @@ const Drawer = (props,event) => {
     color:black;
     opacity:${props.opacity};
     font-size:2rem;
+    display:${props.opacity};
     
     `
 
