@@ -18,15 +18,16 @@ function App(event) {
     setOpentype(type);
   }
 
- 
-
-
+  const fromDrawer=(type)=>{
+    setOpentype(type);
+  }
+  
   return (
     <>
 
 
 <Header getStatus={getStatus}/>
-<Drawer opacity={opacity} opentype={opentype}/>
+<Drawer opacity={opacity} opentype={opentype} fromDrawer={fromDrawer}/>
 <AppRouter/>
 <Footer/>
     </>

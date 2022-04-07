@@ -3,55 +3,67 @@ import styled from "styled-components";
 import {Link} from "react-router-dom"
 import { Mouse } from "@mui/icons-material";
 
-const Drawer = (props,event) => {
+const Drawer = (props) => {
 
   const [drOpentype,setdrOpentype]=useState(props.opentype);
 
+console.log("indrawer ", drOpentype)
+console.log(props)
   const drawerTarget=useRef(null);
 
   const d = document;
-
+ 
+/*
   //type 1//
   const drawerClick=(event)=>{
-
-    console.log(event)
-
     if(event.target===drawerTarget.current){
-      
-   
-
+      console.log("when it is drawer")
+      console.log(event.target);
+      console.log(event)
       console.log("clicked drawer")
-
+      console.log("------------------------")
     }else{
-
-      console.log("not clicked drawer");
-
+      console.log("when it is not drawer")
+      console.log(event.target);
+      console.log(event)
+      console.log("clicked not drawer")
+      console.log("------------------------")
     }
   }
 
-  d.addEventListener('click',drawerClick);
-
-
+  d.addEventListener('click',drawerClick,true);
+ 
+*/
   ///type 2///
 
-  /*
+
 
   d.onclick=(event)=>{
 
-    if(event.target===drawerTarget.current){
-      console.log("it s drawer")
+    let a = (event.target===drawerTarget.current)
+    let b = props.opentype
 
-    }else{
-      console.log("not drawer")
-      console.log("before dr",drOpentype);
+        //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이면, nothing
+      //props opentype이 true일때, 이벤트 타겟이 드로우 타겟이면, nothing
+       // 이게 중요, props opentype이 true일때, 이벤트 타겟이 드로우 타겟이 아니라면, props opentype이 false로 바뀌어야함
+      //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
+
+    if( b && !a ){
+      console.log("first",drOpentype)
       setdrOpentype(true);
-      console.log("dr now?",drOpentype);
+      console.log("second",drOpentype);
+
+      console.log("logic is working")
+
+    }else {
+       
+      console.log("drawer")
     
     }
 
   }
 
-  */
+
 
     const DrawerBG= styled.div`
 
@@ -64,14 +76,12 @@ const Drawer = (props,event) => {
     top:0;
     right:0;
     color:black;
-    opacity:${props.opacity};
+    opacity:${!props.opacity};
     font-size:2rem;
-    display:${props.opacity};
+    display:${props.opentype? "inline-block" : "none"};
+    z-index:100;
     
     `
-
-
-
 
     const DrawerUL=styled.ul`
     list-style:none;
