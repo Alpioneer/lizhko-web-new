@@ -1,12 +1,14 @@
 import React ,{useRef, useState} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
+import { NoEncryption } from "@mui/icons-material";
 
 const Drawer = (props) => {
 
   const drawerTarget=useRef(null);
   const d = document;
   console.log("드로어 안에서",props.opentype);
+  
 
 
 /*
@@ -34,9 +36,12 @@ const Drawer = (props) => {
 
 
 
-  d.onclick=(event)=>{
+  const checkClick = d.onclick=(event)=>{
 
     let a = (event.target===drawerTarget.current)
+    let b = props.opentype;
+    console.log("what a?",a);
+    console.log("what b?",b);
     /*
     var x = event.clientX;
     var y = event.clientY;
@@ -47,19 +52,23 @@ const Drawer = (props) => {
       //props opentype이 true일때, 이벤트 타겟이 드로우 타겟이면, nothing
        // 이게 중요, props opentype이 true일때, 이벤트 타겟이 드로우 타겟이 아니라면, props opentype이 false로 바뀌어야함
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
-    if(!a){
+    if(!a&&!b){
       console.log("밖에 클릭됌")
-      console.log(props.opentype);
-props.getOpentype(false);
-console.log(props.opentype);
+      props.getOpentype(false);
+
       
     }else {
       console.log("drawer")
+      console.log(props.opentype)
     
     }
 
 
+
   }
+
+
+
     const DrawerBG= styled.div`
     
     width:20vw;
@@ -72,8 +81,8 @@ console.log(props.opentype);
     right:0;
     color:black;
     font-size:2rem;
-    display:none;
     z-index:100;
+    display:${props=>props.opentype?'block':'none'}
     `
 
     const DrawerUL=styled.ul`
@@ -97,9 +106,9 @@ console.log(props.opentype);
     `
 
 
+    console.log("last check", props);
 
     return (
-      
       <>
       <DrawerBG props={props} ref={drawerTarget}>
       <DrawerUL>
