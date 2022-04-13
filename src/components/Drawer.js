@@ -1,16 +1,12 @@
-import React ,{useRef, useState} from "react";
+import React ,{useRef} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
-import { NoEncryption } from "@mui/icons-material";
+
 
 const Drawer = (props) => {
 
   const drawerTarget=useRef(null);
   const d = document;
-  console.log("드로어 안에서",props.opentype);
-  
-
-
 /*
   //type 1//
   const drawerClick=(event)=>{
@@ -36,7 +32,7 @@ const Drawer = (props) => {
 
 
 
-  const checkClick = d.onclick=(event)=>{
+d.onclick=(event)=>{
 
     let a = (event.target===drawerTarget.current)
     let b = props.opentype;
@@ -52,22 +48,17 @@ const Drawer = (props) => {
       //props opentype이 true일때, 이벤트 타겟이 드로우 타겟이면, nothing
        // 이게 중요, props opentype이 true일때, 이벤트 타겟이 드로우 타겟이 아니라면, props opentype이 false로 바뀌어야함
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
+
     if(!a&&!b){
-      console.log("밖에 클릭됌")
+      console.log("sex")
+      props.getOpentype(true);
+    }else if(!a&&b){
       props.getOpentype(false);
-
-      
-    }else {
-      console.log("drawer")
-      console.log(props.opentype)
-    
     }
-
-
-
+      else {
+    console.log("drawer")
+    }
   }
-
-
 
     const DrawerBG= styled.div`
     
@@ -82,8 +73,8 @@ const Drawer = (props) => {
     color:black;
     font-size:2rem;
     z-index:100;
-    display:${props=>props.opentype?'block':'none'}
-    `
+    display:none;
+    ${(props) => (console.log(props.props.opentype),props.props.opentype? `display:block` : `display:none`)}`
 
     const DrawerUL=styled.ul`
     list-style:none;
@@ -105,8 +96,6 @@ const Drawer = (props) => {
 
     `
 
-
-    console.log("last check", props);
 
     return (
       <>
