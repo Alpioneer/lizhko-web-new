@@ -8,26 +8,29 @@ import Drawer from 'components/Drawer';
 function App(event) {
 
 
- 
-  const [opacity,setOpacity] =useState(0);
   const [opentype,setOpentype] =useState(false);
 
 
-  const getStatus=(num,type)=>{
-    setOpacity(num);
-    setOpentype(type);
+console.log("초기 opentype",opentype)
+
+
+  const getOpentype=async(x)=>{
+    setOpentype(x);
+    console.log("app으로 상태 전달 후 ",opentype)
   }
 
-  const fromDrawer=(type)=>{
-    setOpentype(type);
-  }
+
+  setTimeout(console.log("app으로 상태 전달 후 ",opentype),10000)
+
+
+  
   
   return (
     <>
 
 
-<Header getStatus={getStatus}/>
-<Drawer opacity={opacity} opentype={opentype} fromDrawer={fromDrawer}/>
+<Header opentype={opentype} getOpentype={getOpentype}/>
+<Drawer opentype={opentype} getOpentype={getOpentype}/>
 <AppRouter/>
 <Footer/>
     </>

@@ -1,18 +1,14 @@
-import React ,{useRef,useState} from "react";
+import React ,{useRef, useState} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
-import { Mouse } from "@mui/icons-material";
 
 const Drawer = (props) => {
 
-  const [drOpentype,setdrOpentype]=useState(props.opentype);
-
-console.log("indrawer ", drOpentype)
-console.log(props)
   const drawerTarget=useRef(null);
-
   const d = document;
- 
+  console.log("드로어 안에서",props.opentype);
+
+
 /*
   //type 1//
   const drawerClick=(event)=>{
@@ -41,32 +37,31 @@ console.log(props)
   d.onclick=(event)=>{
 
     let a = (event.target===drawerTarget.current)
-    let b = props.opentype
+    /*
+    var x = event.clientX;
+    var y = event.clientY;
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    console.log("coords is" ,coords)*/
 
         //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이면, nothing
       //props opentype이 true일때, 이벤트 타겟이 드로우 타겟이면, nothing
        // 이게 중요, props opentype이 true일때, 이벤트 타겟이 드로우 타겟이 아니라면, props opentype이 false로 바뀌어야함
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
-
-    if( b && !a ){
-      console.log("first",drOpentype)
-      setdrOpentype(true);
-      console.log("second",drOpentype);
-
-      console.log("logic is working")
-
+    if(!a){
+      console.log("밖에 클릭됌")
+      console.log(props.opentype);
+props.getOpentype(false);
+console.log(props.opentype);
+      
     }else {
-       
       console.log("drawer")
     
     }
 
+
   }
-
-
-
     const DrawerBG= styled.div`
-
+    
     width:20vw;
     height:100vh;
     background-color:white;
@@ -76,11 +71,9 @@ console.log(props)
     top:0;
     right:0;
     color:black;
-    opacity:${!props.opacity};
     font-size:2rem;
-    display:${props.opentype? "inline-block" : "none"};
+    display:none;
     z-index:100;
-    
     `
 
     const DrawerUL=styled.ul`
@@ -101,13 +94,14 @@ console.log(props)
         font-weight:bold;
     }
 
-    
     `
-    
+
+
+
     return (
       
       <>
-      <DrawerBG props ref={drawerTarget}>
+      <DrawerBG props={props} ref={drawerTarget}>
       <DrawerUL>
           <DrawerLI><Link to="/">Home</Link></DrawerLI>
           <DrawerLI><Link to="/Memebers">Memebers</Link></DrawerLI>

@@ -7,21 +7,11 @@ import { Link } from 'react-router-dom';
 
 export default function Header(props) {
 
+  const menuClick = (props) =>{
 
-  const [opentype,setOpentype] = useState(false);
-  const [opacity,setOpacity] = useState(0);
+    console.log("겟 부여");
+  props.getOpentype(true);
 
-
-  const menuClick = (opentype,opacity) =>{
-
-  opentype? opacity=0 : opacity=0.9
-
-   setOpentype(!opentype);
-   setOpacity(opacity)
-
-   props.getStatus(opacity,opentype);
-   console.log("once click, opentype" , opentype)
-   
   };
 
 
@@ -57,7 +47,7 @@ export default function Header(props) {
     <>
     <Box>
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
-  <HNode onClick={()=>{menuClick(opentype,opacity)}}>
+  <HNode onClick={()=>{menuClick(props)}}>
     <MenuIC width="20px"/>
   </HNode>
     </Box>
