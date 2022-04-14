@@ -1,4 +1,4 @@
-import  React  from 'react';
+import  React ,{useRef} from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Lizhko} from '../images/brick.svg'
 import { ReactComponent as MenuIC } from '../images/menuIC.svg'
@@ -7,12 +7,17 @@ import Drawer from './Drawer';
 
 export default function Header(props) {
 
-  console.log("헤더안에서 오픈타입",props.opentype)
+
+  
+
 
   const menuClick = (props) =>{
   props.getOpentype(true);
   };
-  
+
+  const menuTarget=useRef(null);
+
+
   const Box= styled.div`
   padding:0 60px;
   box-sizing:border-box;
@@ -44,8 +49,8 @@ export default function Header(props) {
     <>
     <Box>
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
-   
-   <HNode>
+  
+   <HNode ref={menuTarget}>
     <MenuIC width="20px">
       <Drawer onClick={()=>{menuClick(props)}}/>
     </MenuIC>

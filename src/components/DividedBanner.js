@@ -21,18 +21,19 @@ const DividedBanner = (props) => {
     const InfoTask=styled.div`
     width:50%;
     padding:5%;
-    border:1px solid orange;
     background-color:white;
     z-index:1;
     flex-direction: column;
     box-sizing:border-box;
-    color:blue;
+    color:grey;
+    font-size:12px;
+    line-height:16px;
     `
     const InfoPic=styled.div`
     width:50%;
     height:566px;
     box-sizing:border-box;
-    background-color:blue;
+    background-color:grey;
     `
 
 

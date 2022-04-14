@@ -1,6 +1,7 @@
 import React ,{useRef} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
+import {menuTarget} from "components/Header"
 
 
 const Drawer = (props) => {
@@ -34,8 +35,15 @@ const Drawer = (props) => {
 
 d.onclick=(event)=>{
 
+  event.stopPropagation();
+  
+
     let a = (event.target===drawerTarget.current)
     let b = props.opentype;
+
+    console.log("이벤트 타겟",event.target)
+    console.log("이벤트 커런트 타겟",event.currentTarget)
+
     /*
     var x = event.clientX;
     var y = event.clientY;
@@ -71,7 +79,8 @@ d.onclick=(event)=>{
     font-size:2rem;
     z-index:100;
     display:none;
-    ${(props) => (console.log(props.props.opentype),props.props.opentype? `display:block` : `display:none`)}`
+    
+    ${(props) => (props.props.opentype? `display:block` : `display:none`)}`
 
     const DrawerUL=styled.ul`
     list-style:none;
