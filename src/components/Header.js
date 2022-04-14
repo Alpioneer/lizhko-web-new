@@ -10,7 +10,6 @@ export default function Header(props) {
   console.log("헤더안에서 오픈타입",props.opentype)
 
   const menuClick = (props) =>{
-    console.log("겟 부여");
   props.getOpentype(true);
   };
   
@@ -36,7 +35,6 @@ export default function Header(props) {
   position:relative;
   display:flex;
   align-items:center;
-
   justify-content:center;
   `
 
@@ -46,9 +44,13 @@ export default function Header(props) {
     <>
     <Box>
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
-  <Drawer onClick={()=>{menuClick(props)}}>
-    <MenuIC width="20px"/>
-  </Drawer>
+   
+   <HNode>
+    <MenuIC width="20px">
+      <Drawer onClick={()=>{menuClick(props)}}/>
+    </MenuIC>
+   </HNode>
+
     </Box>
    
     </>

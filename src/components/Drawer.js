@@ -36,8 +36,6 @@ d.onclick=(event)=>{
 
     let a = (event.target===drawerTarget.current)
     let b = props.opentype;
-    console.log("what a?",a);
-    console.log("what b?",b);
     /*
     var x = event.clientX;
     var y = event.clientY;
@@ -50,7 +48,6 @@ d.onclick=(event)=>{
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
 
     if(!a&&!b){
-      console.log("sex")
       props.getOpentype(true);
     }else if(!a&&b){
       props.getOpentype(false);

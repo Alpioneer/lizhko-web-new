@@ -9,12 +9,8 @@ function App(){
 
   const [opentype,setOpentype] =useState(false);
 
-console.log("초기 opentype",opentype)
-
   const getOpentype=(x)=>{
     setOpentype(x);
-
-    console.log("앱에서 뭘까요",opentype)
   }  
   
   return (
