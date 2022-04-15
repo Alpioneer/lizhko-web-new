@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 const Drawer = (props) => {
 
-  console.log("Drawer에서" ,props.props.opentype)
+  console.log("drawer에서",props)
 
   const drawerTarget=useRef(null);
   const d = document;
@@ -33,15 +33,18 @@ const Drawer = (props) => {
   ///type 2///
 
 
-
+  /*
 d.onclick=(event)=>{
 
     let a = (event.target===drawerTarget.current)
-    let b = props.opentype;
+    let b = props.props.opentype;
+    let c = (event.target===document.getElementsByTagName('svg'))
 
-    console.log("이벤트 타겟",event.target)
-    console.log("이벤트 커런트 타겟",event.currentTarget)
-
+    console.log("what a is ",a)
+    console.log("what b is ",b)
+    console.log("what c is",c)
+    console.log("방금 찍은거 >>>>>",event.target)
+}*/
     /*
     var x = event.clientX;
     var y = event.clientY;
@@ -53,18 +56,9 @@ d.onclick=(event)=>{
        // 이게 중요, props opentype이 true일때, 이벤트 타겟이 드로우 타겟이 아니라면, props opentype이 false로 바뀌어야함
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
 
-    if(!a&&!b){
-      props.getOpentype(true);
-    }else if(!a&&b){
-      props.getOpentype(false);
-    }
-      else {
-    console.log("drawer")
-    }
-  }
- /* ${(props) => (props.props.opentype? `display:block` : `display:none`)}`*/
-    const DrawerBG= styled.div`
-    
+  
+  const DrawerBG= styled.div`
+  
     width:20vw;
     height:100vh;
     background-color:white;
@@ -75,8 +69,12 @@ d.onclick=(event)=>{
     right:0;
     color:black;
     font-size:2rem;
+    z-index:-50;
+    display:none;
     `
     
+    
+    // ${(props) =>(props.props.props.opentype? 'display:block' :'display:none')}
   
 
     const DrawerUL=styled.ul`
@@ -102,7 +100,7 @@ d.onclick=(event)=>{
 
     return (
       <>
-      <DrawerBG props={props} ref={drawerTarget}>
+      <DrawerBG>
       <DrawerUL>
           <DrawerLI><Link to="/">Home</Link></DrawerLI>
           <DrawerLI><Link to="/Memebers">Memebers</Link></DrawerLI>

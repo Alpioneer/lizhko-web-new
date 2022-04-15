@@ -1,23 +1,40 @@
-import  React ,{useRef} from 'react';
+import  React ,{useState} from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Lizhko} from '../images/brick.svg'
 import { ReactComponent as MenuIC } from '../images/menuIC.svg'
 import { Link } from 'react-router-dom';
 import Drawer from './Drawer';
 
-export default function Header(props) {
+export default function Header() {
 
-  const menuTarget=useRef(null);
+  const [opentype,setOpentype] =useState(false);
 
 
-  console.log("Header에서" ,props)
 
-  const menuClick = (props) =>{
-  props.getOpentype(true);  
-  };
-  
 
-  const Box= styled.div`
+  console.log("초기 opentype",opentype)
+
+
+
+
+  const getOpentype=(type)=>{
+    setOpentype(type);
+   console.log("Header에서 오픈타입?",opentype)
+  }  
+
+
+  const drawerOpen =(opentype)=>{
+    console.log("hey?")
+    setOpentype(true);
+  }
+
+
+
+
+
+
+  const Header= styled.header`
+
   padding:0 60px;
   box-sizing:border-box;
   width:100vw;
@@ -40,21 +57,22 @@ export default function Header(props) {
   display:flex;
   align-items:center;
   justify-content:center;
+
+  
   `
 
 
   return (
-
     <>
-    <Box>
+    <Header props>
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
-  
-   <HNode props={props} ref={menuTarget} onClick={()=>{menuClick(props)}}>
+
+   <HNode props onClick={()=>drawerOpen(opentype)}>
     <MenuIC width="20px"/>
-   <Drawer props={props}/>
+   <Drawer getOpentyp={getOpentype} opentype={opentype}/>
    </HNode>
 
-    </Box>
+    </Header>
    
     </>
   );
