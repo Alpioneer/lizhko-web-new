@@ -7,16 +7,15 @@ import Drawer from './Drawer';
 
 export default function Header(props) {
 
-
-  
-
-
-  const menuClick = (props) =>{
-  props.getOpentype(true);
-  };
-
   const menuTarget=useRef(null);
 
+
+  console.log("Header에서" ,props)
+
+  const menuClick = (props) =>{
+  props.getOpentype(true);  
+  };
+  
 
   const Box= styled.div`
   padding:0 60px;
@@ -50,10 +49,9 @@ export default function Header(props) {
     <Box>
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
   
-   <HNode ref={menuTarget}>
-    <MenuIC width="20px">
-      <Drawer onClick={()=>{menuClick(props)}}/>
-    </MenuIC>
+   <HNode props={props} ref={menuTarget} onClick={()=>{menuClick(props)}}>
+    <MenuIC width="20px"/>
+   <Drawer props={props}/>
    </HNode>
 
     </Box>

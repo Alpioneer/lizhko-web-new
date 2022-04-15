@@ -1,10 +1,11 @@
 import React ,{useRef} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
-import {menuTarget} from "components/Header"
 
 
 const Drawer = (props) => {
+
+  console.log("Drawer에서" ,props.props.opentype)
 
   const drawerTarget=useRef(null);
   const d = document;
@@ -35,9 +36,6 @@ const Drawer = (props) => {
 
 d.onclick=(event)=>{
 
-  event.stopPropagation();
-  
-
     let a = (event.target===drawerTarget.current)
     let b = props.opentype;
 
@@ -64,7 +62,7 @@ d.onclick=(event)=>{
     console.log("drawer")
     }
   }
-
+ /* ${(props) => (props.props.opentype? `display:block` : `display:none`)}`*/
     const DrawerBG= styled.div`
     
     width:20vw;
@@ -77,10 +75,9 @@ d.onclick=(event)=>{
     right:0;
     color:black;
     font-size:2rem;
-    z-index:100;
-    display:none;
+    `
     
-    ${(props) => (props.props.opentype? `display:block` : `display:none`)}`
+  
 
     const DrawerUL=styled.ul`
     list-style:none;
