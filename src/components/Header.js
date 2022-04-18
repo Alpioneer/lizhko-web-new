@@ -1,4 +1,4 @@
-import  React ,{useState} from 'react';
+import  React ,{useState,useRef} from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Lizhko} from '../images/brick.svg'
 import { ReactComponent as MenuIC } from '../images/menuIC.svg'
@@ -10,27 +10,62 @@ export default function Header() {
   const [opentype,setOpentype] =useState(false);
 
 
-
-
-  console.log("초기 opentype",opentype)
-
-
-
-
   const getOpentype=(type)=>{
     setOpentype(type);
-   console.log("Header에서 오픈타입?",opentype)
   }  
 
+  
+const d = document;
 
-  const drawerOpen =(opentype)=>{
-    console.log("hey?")
+const menuRef=useRef(null)
+
+
+d.onclick=(e)=>{
+
+  let a = opentype;
+  let b = (e.target.tagName!=="NAV")
+  let c = (e.target===menuRef.current)
+
+  
+  if(!a&&c){
     setOpentype(true);
+  } else if(a&&b) {
+    setOpentype(false);
+  }else{
+  }
+}
+
+
+
+
+  /* d.click = true,false   opentype = true,false , tagname:nav = true ,false    */
+
+  
+
+
+
+
+/*
+  //type 1//
+  const drawerClick=(event)=>{
+    if(event.target===drawerTarget.current){
+      console.log("when it is drawer")
+      console.log(event.target);
+      console.log(event)
+      console.log("clicked drawer")
+      console.log("------------------------")
+    }else{
+      console.log("when it is not drawer")
+      console.log(event.target);
+      console.log(event)
+      console.log("clicked not drawer")
+      console.log("------------------------")
+    }
   }
 
+  d.addEventListener('click',drawerClick,true);
 
-
-
+  */
 
 
   const Header= styled.header`
@@ -51,27 +86,30 @@ export default function Header() {
   const HNode=styled.div`
 
  width:80px;
-  height:40px;
+  height:60px;
   z-index:1;
   position:relative;
-  display:flex;
+  display:flex;시
   align-items:center;
   justify-content:center;
 
+
   
   `
+
+  console.log("init 끝")
 
 
   return (
     <>
     <Header props>
+
+   <Drawer name={"drawer"} getOpentype={getOpentype} opentype={opentype}/>
+
       <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
-
-   <HNode props onClick={()=>drawerOpen(opentype)}>
-    <MenuIC width="20px"/>
-   <Drawer getOpentyp={getOpentype} opentype={opentype}/>
+   <HNode ref={menuRef} props>
+    <MenuIC  width="20px"/>
    </HNode>
-
     </Header>
    
     </>

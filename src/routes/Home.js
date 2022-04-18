@@ -7,7 +7,7 @@ const Home =()=>{
     const Banner=styled.div`
     width:100vw;
     height:40vh;
-    background-color:blue;
+    background-color:black;
     color:white;
     display:flex;
     justify-content:center;
@@ -16,7 +16,7 @@ const Home =()=>{
     return(
 
         <>
-       <Banner>this is video played.</Banner>
+       <Banner>Under construction</Banner>
         </>
     )
     

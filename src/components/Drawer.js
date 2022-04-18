@@ -1,4 +1,4 @@
-import React ,{useRef} from "react";
+import React  from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom"
 
@@ -6,30 +6,7 @@ import {Link} from "react-router-dom"
 const Drawer = (props) => {
 
   console.log("drawer에서",props)
-
-  const drawerTarget=useRef(null);
-  const d = document;
-/*
-  //type 1//
-  const drawerClick=(event)=>{
-    if(event.target===drawerTarget.current){
-      console.log("when it is drawer")
-      console.log(event.target);
-      console.log(event)
-      console.log("clicked drawer")
-      console.log("------------------------")
-    }else{
-      console.log("when it is not drawer")
-      console.log(event.target);
-      console.log(event)
-      console.log("clicked not drawer")
-      console.log("------------------------")
-    }
-  }
-
-  d.addEventListener('click',drawerClick,true);
  
-*/
   ///type 2///
 
 
@@ -57,7 +34,7 @@ d.onclick=(event)=>{
       //props opentype이 false일때, 이벤트 타겟이 드로우 타겟이 아니라면, nothing
 
   
-  const DrawerBG= styled.div`
+  const DrawerBG= styled.nav`
   
     width:20vw;
     height:100vh;
@@ -69,13 +46,9 @@ d.onclick=(event)=>{
     right:0;
     color:black;
     font-size:2rem;
-    z-index:-50;
-    display:none;
+    z-index:150;
+   ${(props) =>console.log(props),(props.opentype? 'display:block' :'display:none')}
     `
-    
-    
-    // ${(props) =>(props.props.props.opentype? 'display:block' :'display:none')}
-  
 
     const DrawerUL=styled.ul`
     list-style:none;
@@ -100,12 +73,11 @@ d.onclick=(event)=>{
 
     return (
       <>
-      <DrawerBG>
+      <DrawerBG props>
       <DrawerUL>
           <DrawerLI><Link to="/">Home</Link></DrawerLI>
           <DrawerLI><Link to="/Memebers">Memebers</Link></DrawerLI>
           <DrawerLI><Link to="/Works">Works</Link></DrawerLI>
-          <DrawerLI><Link to="/About">About</Link></DrawerLI>
           <DrawerLI><Link to="/Blog">Blog</Link></DrawerLI>
           <DrawerLI><Link to="/Gallery">Gallery</Link></DrawerLI>
        </DrawerUL>
