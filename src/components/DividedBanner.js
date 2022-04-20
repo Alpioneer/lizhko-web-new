@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TextOne from "./TextOne";
 import TextRegular from "./TextRegular";
 import TextTwo from "./TextTwo";
+import Btn from "./Btn";
 
 
 
@@ -41,7 +42,7 @@ const DividedBanner = (props) => {
       <>
 
       <BG props>
-      <InfoTask><TextOne text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/></InfoTask>
+      <InfoTask><TextOne text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/><Btn btnText={props.btnText}/></InfoTask>
       <InfoPic/>
       </BG>
 

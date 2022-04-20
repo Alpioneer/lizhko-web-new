@@ -87,12 +87,12 @@ d.onclick=(e)=>{
 
  width:80px;
   height:60px;
+  min-height:60px;
   z-index:1;
   position:relative;
-  display:flex;시
+  display:flex;
   align-items:center;
   justify-content:center;
-
 
   
   `
@@ -105,8 +105,7 @@ d.onclick=(e)=>{
     <Header props>
 
    <Drawer name={"drawer"} getOpentype={getOpentype} opentype={opentype}/>
-
-      <HNode><Link to="/"><Lizhko width="80px"/></Link></HNode>
+      <HNode><Link to="/"><Lizhko height="60px" width="80px"/></Link></HNode>
    <HNode ref={menuRef} props>
     <MenuIC  width="20px"/>
    </HNode>

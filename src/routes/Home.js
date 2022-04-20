@@ -7,7 +7,7 @@ const Home =()=>{
     const Banner=styled.div`
     width:100vw;
     height:40vh;
-    background-color:black;
+    background:gray;
     color:white;
     display:flex;
     justify-content:center;
@@ -22,4 +22,4 @@ const Home =()=>{
     
 }
 
-export default Home
+export default Home;
