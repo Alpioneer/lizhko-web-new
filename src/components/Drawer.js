@@ -5,8 +5,6 @@ import {Link} from "react-router-dom"
 
 const Drawer = (props) => {
 
-  console.log("drawer에서",props)
- 
   ///type 2///
 
 
@@ -43,29 +41,47 @@ d.onclick=(event)=>{
     border:20px 30px 90px 30px;
     position:fixed;
     top:0;
+    opacity:0.9;
     right:0;
     color:black;
     font-size:2rem;
     z-index:150;
-   ${(props) =>console.log(props),(props.opentype? 'display:block' :'display:none')}
+
+   ${(props) =>(console.log("Drawer")),(props.opentype? 'display:block' :'display:none')}
     `
+
+
 
     const DrawerUL=styled.ul`
     list-style:none;
     `
     const DrawerLI=styled.li`
+    
     list-style:none;
     font-weight:100;
     letter-spacing:-0.6px;
 
     & a{
-        text-decoration:none;
-        color:rgba(35, 39, 42, 1);
+      text-decoration: none;
+      display: inline-block;
+      color: rgba(35, 39, 42, 1);
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 1.4;
+  
       }
 
-    &:active{
-        color:red;
-        font-weight:bold;
+      & a:hover{
+        font-weight:400;
+        opacity:0.9;
+     }
+
+    & a:visited{
+
+       opacity:0.5;
+       color:rgba(35, 39, 42, 1);
     }
 
     `
@@ -86,6 +102,4 @@ d.onclick=(event)=>{
       )
   }
   
-
-
   export default Drawer;

@@ -16,7 +16,6 @@ const AvatarCard = (props) => {
     display:flex;
     height:auto;
     padding:10vw 10vw;
-    border:1px solid red;
     align-items:center;
     justify-content:center;
     flex-direction:${props.left?'row':'row-reverse'}
@@ -24,13 +23,15 @@ const AvatarCard = (props) => {
     `
 
     const InfoAvatar=styled.div`
-    width:50%;
-    padding:5%;
-    border:1px solid black;
-    background-color:white;
-    z-index:1;
-    flex-direction: column;
-    color:blue;
+    color: #444852;
+    font-size:12px;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    line-height: 1.60em;
+    padding: 10%;
+    border: 1px solid #3e4e4f;
+    background-color: #fff;
+    border-radius: 2px;
     `
 
     const InfoPic=styled.div`
@@ -38,7 +39,7 @@ const AvatarCard = (props) => {
    height:400px;
    min-width:400px;
     border:1px solid blue;
-    opacity:0.3;
+    opacity:1;
     position:relative;
     background-color:blue;
     ${props.left? 'right:3%' : 'left:3%'}

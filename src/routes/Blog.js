@@ -17,7 +17,11 @@ const Blog =()=>{
     return(
 
         <>
-    <Container>Blog</Container>
+    <Container>Blog
+
+
+        
+    </Container>
  
  
         </>

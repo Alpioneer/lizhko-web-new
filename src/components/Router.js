@@ -8,6 +8,9 @@ import Home from "routes/Home";
 import Members from "routes/Members";
 import Works from "routes/Works";
 import Blog from "routes/Blog";
+import DesignDefault from "routes/Interface-service/DesignDefault";
+import SiDefault from "routes/Si-service/SiDefault"
+
 
 
 const AppRouter = () => {
@@ -20,8 +23,17 @@ const AppRouter = () => {
     <Route exact path="/Works" element={<Works/>}/>
     <Route exact path="/Blog" element={<Blog/>}/>
     <Route exact path="/Gallery" element={<Gallery/>}></Route>
-
     </Routes>
+    
+    <DesignDefault/>
+    <SiDefault/>
+
+
+
+
+
+
+    
  
         </>
     )

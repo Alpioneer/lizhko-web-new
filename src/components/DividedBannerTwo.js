@@ -8,7 +8,7 @@ import Btn from "./Btn";
 
 
 
-const DividedBanner = (props) => {
+const DividedBannerTwo = (props) => {
 
 
     const BG=styled.section`
@@ -52,4 +52,4 @@ const DividedBanner = (props) => {
   
 
 
-  export default DividedBanner
+  export default DividedBannerTwo

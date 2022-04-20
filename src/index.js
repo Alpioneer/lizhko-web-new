@@ -25,8 +25,6 @@ body {
 }
 `
 
-
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 
-const Members =()=>{
+const InterfaceDesignListTwo =()=>{
 
     const Null=styled.div`
 
@@ -11,10 +11,10 @@ const Members =()=>{
     return(
 
         <>
-        <Null></Null>
+        <Null>Page one</Null>
         </>
     )
     
 }
 
-export default Members
+export default InterfaceDesignListTwo;

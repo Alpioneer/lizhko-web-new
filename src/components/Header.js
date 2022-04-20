@@ -9,16 +9,13 @@ export default function Header() {
 
   const [opentype,setOpentype] =useState(false);
 
-
   const getOpentype=(type)=>{
     setOpentype(type);
   }  
-
   
 const d = document;
 
 const menuRef=useRef(null)
-
 
 d.onclick=(e)=>{
 
@@ -26,7 +23,6 @@ d.onclick=(e)=>{
   let b = (e.target.tagName!=="NAV")
   let c = (e.target===menuRef.current)
 
-  
   if(!a&&c){
     setOpentype(true);
   } else if(a&&b) {
@@ -97,14 +93,11 @@ d.onclick=(e)=>{
   
   `
 
-  console.log("init 끝")
-
-
   return (
     <>
     <Header props>
 
-   <Drawer name={"drawer"} getOpentype={getOpentype} opentype={opentype}/>
+   <Drawer getOpentype={getOpentype} opentype={opentype}/>
       <HNode><Link to="/"><Lizhko height="60px" width="80px"/></Link></HNode>
    <HNode ref={menuRef} props>
     <MenuIC  width="20px"/>
