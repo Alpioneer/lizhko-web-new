@@ -94,7 +94,7 @@ d.onclick=(event)=>{
           <DrawerLI><Link to="/">Home</Link></DrawerLI>
           <DrawerLI><Link to="/Memebers">Memebers</Link></DrawerLI>
           <DrawerLI><Link to="/Works">Works</Link></DrawerLI>
-          <DrawerLI><Link to="/Blog">Blog</Link></DrawerLI>
+          <DrawerLI><Link to="/Blog/PostOne">Blog</Link></DrawerLI>
           <DrawerLI><Link to="/Gallery">Gallery</Link></DrawerLI>
        </DrawerUL>
       </DrawerBG>
