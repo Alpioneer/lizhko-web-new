@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import TextRegular from "./TextRegular";
 
 
 const BlogContainer = (props) =>{
@@ -14,12 +15,12 @@ const BlogContainer = (props) =>{
 
         const BlogTitle=styled.span`
         
-
-
         font-weight: 700;
         font-size: 3rem;
         line-height: 1;
         color: #474e60;
+        margin-bottom:40px;
+        box-sizing:border-box;
     }
         `
 
@@ -27,33 +28,36 @@ const BlogContainer = (props) =>{
         const BlogAuthor=styled.span`
 
 
-        font-weight: bold;
+        font-weight: light;
         color: #2c3241;
-        font-size: 1rem;
+        font-size: 16px;
         line-height: 1.3;
+        box-sizing:border-box;
         `
 
         const BlogDate=styled.span`
 
-        font-weight: 600;
+        font-weight: bold;
         color: #2c3241;
-        font-size: 1rem;
+        font-size: 14px;
         line-height: 1.3;
+        box-sizing:border-box;
+        margin-bottom:40px;
         `
+        
 
 
         const BlogDescribe=styled.span`
         
-        font-weight: 600;
+        font-weight:600;
         color: #2c3241;
         font-size: 12px;
-        line-height: 1.3;
-    
+        line-height: 24px;
+        box-sizing:border-box;
+        letter-spacing:-0.1px;
+
         `
         
-    
-    
-    
     return(
 
     <>
@@ -63,6 +67,7 @@ const BlogContainer = (props) =>{
         <BlogAuthor>{props.author}</BlogAuthor>
         <BlogDate>{props.date}</BlogDate>
         <BlogDescribe>{props.describe}</BlogDescribe>
+
     </Container>
 
     

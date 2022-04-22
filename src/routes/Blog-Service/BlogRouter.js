@@ -1,19 +1,14 @@
 import React from "react";
 import { Routes, Route} from "react-router-dom";
 import BlogPostOne from "./Task/BlogPostOne";
-import styled from "styled-components";
 import BlogPostTwo from "./Task/BlogPostTwo";
 import BlogPostThree from "./Task/BlogPostThree";
 
 const BlogRouter =()=>{
 
- 
-
- 
     return(
 
         <>
-
 
   <Routes>
       
@@ -22,8 +17,6 @@ const BlogRouter =()=>{
     <Route exact path='/Blog/PostThree' element={<BlogPostThree/>}></Route>
 
  </Routes>
-
- 
  
         </>
     )

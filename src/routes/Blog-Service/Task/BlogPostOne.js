@@ -24,9 +24,6 @@ Micro trends are a kind of flow in which values and meanings can be clearly defi
 
 Therefore, in design planning, it is important to identify trends of two criteria. Our meaning is conveyed to different people, which is largely relevant in the case of the masses. The propensity of the public depends on 'various factors depending on the time of the time', and the work that can understand and grasp this is the trend understanding. By understanding trends, we can deliver messages that can include more targets in design planning.
 
-
-
-
 디자인의 단어적 정의는 각 사람마다 달라질 수 있으며, 기획한다는 것 또한, 제작의 경우에 따라 중요 기준이 달라질 수 있습니다. 그런 이유로 인해 우리애게 디자인 기획은  '대중과 개개인 각각에게 의미를 전달하는 것'입니다.
 
 물론 경우에 따라 그 디자인 방법론이 접목되는 접점은 다양히 변할 수 있지만, ‘트렌드’라는 것은 '시간의 흐름'에 따라 그 가치가 달리 적용될 수 있다는 점이다. 그리고 우리는 트렌드를 그러한 기능적인 하나의 ‘맥락’의 개념에서 접근하고 싶습니다.

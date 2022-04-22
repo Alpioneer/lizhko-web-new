@@ -3,9 +3,14 @@ import styled from "styled-components";
 
 
 const TextRegular = (props)=>{
+
+
+    const Span=styled.span`
+  
+    `
     
     return (<>
-    <span>{props.text}</span>
+    <Span>{props.text}</Span>
     </>)
 
 }

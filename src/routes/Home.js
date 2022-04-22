@@ -6,18 +6,22 @@ const Home =()=>{
 
     const Banner=styled.div`
     width:100vw;
-    height:40vh;
-    background:gray;
+    height:600px;
+    background:black;
     color:white;
     display:flex;
     justify-content:center;
+    text-align:center;
     align-items:center;
+    line-height:30px;
     `
     return(
 
         <>
-       <Banner>Under construction</Banner>
+       <Banner>Now is the time to think more about the meaning of design in business.<br/>
+기업의 비즈니스에서 디자인의 의미를 생각해 볼 때입니다.</Banner>
         </>
+        
     )
     
 }
