@@ -19,7 +19,7 @@ const Home =()=>{
 
         <>
        <Banner>Now is the time to think more about the meaning of design in business.<br/>
-기업의 비즈니스에서 디자인의 의미를 생각해 볼 때입니다.</Banner>
+기업의 비즈니스에서 디자인의 의미를 생각해 볼 adsfasdfas때입니다.</Banner>
         </>
         
     )
