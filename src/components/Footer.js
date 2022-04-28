@@ -7,13 +7,12 @@ const Footer= ()=>{
   
 
 
-const Container = styled.div`
+const Footer = styled.footer`
 
 display:flex;
 flex-direction:column;
 gap:5px;
 padding:5vh 5vw;
-position:absolute;
 width:100%;
 box-sizing:border-box;
 z-index:-5;
@@ -30,7 +29,7 @@ z-index:-5;
 
         <>
 
-        <Container>
+        <Footer>
 
 
         <FooterType>team@lizhko.io</FooterType>
@@ -38,7 +37,7 @@ z-index:-5;
         <FooterType>Copyright ⓒ 2020-2021. All Rights Reserved.</FooterType>
 
 
-        </Container>
+        </Footer>
 
 </>
     )
