@@ -10,6 +10,8 @@ import TextTwo from "./TextTwo";
 const AvatarCard = (props) => {
 
 
+  console.log(require)
+
 
     const BG=styled.section`
 
@@ -41,17 +43,27 @@ const AvatarCard = (props) => {
     border:1px solid blue;
     opacity:1;
     position:relative;
-    background-color:blue;
     ${props.left? 'right:3%' : 'left:3%'}
     `
 
 
+const AvatarImg=styled.img`
+
+&&&{
+border:"5px solid red",
+width:"100%",
+height:"100%"
+}
+  
+
+
+`
     return (
       <>
 
       <BG props>
       <InfoAvatar><TextOne text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/></InfoAvatar>
-      <InfoPic/>
+      <InfoPic><AvatarImg src={"https://freight.cargo.site/t/original/i/f08a0ddc4ae406f559b7e2732039240e2ae423fec09a12fc5a3b35b71bac0d35/9.jpg"}/></InfoPic>
       </BG>
 
 

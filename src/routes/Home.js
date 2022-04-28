@@ -51,12 +51,13 @@ const Home =()=>{
 <TestPlayer
 
           className='react-player'
-          url='https://www.youtube.com/watch?v=WPdWvnAAurg&ab_channel=SMTOWN'
-          width='100vw'
+          url='https://www.youtube.com/watch?v=O2vrsK5um9w'
+          width='100%'
           height="600px"
           muted='true'
           playing='true'
           loop='true'
+         
           
         />
 
