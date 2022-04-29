@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 
 const InterfaceDesignListTwo =()=>{
-
     const Null=styled.div`
-
-
     `
     return(
 

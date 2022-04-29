@@ -6,10 +6,7 @@ import TextTwo from "./TextTwo";
 import Btn from "./Btn";
 
 
-
-
 const DividedBannerTwo = (props) => {
-
 
     const BG=styled.section`
     display:flex;
@@ -25,7 +22,7 @@ const DividedBannerTwo = (props) => {
     z-index:1;
     flex-direction: column;
     box-sizing:border-box;
-    color:grey;
+    color:#444852;
     font-size:12px;
     line-height:16px;
     `
