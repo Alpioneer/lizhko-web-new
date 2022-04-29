@@ -29,23 +29,27 @@ const DividedBannerTwo = (props) => {
     font-size:12px;
     line-height:16px;
     `
-    const InfoPic=styled.div`
+
+    const Div=styled.div`
     width:50%;
     height:566px;
     box-sizing:border-box;
-    background-color:grey;
     `
 
+    const Pic=styled.img`
+     &&&{
+      width:100%;
+      height:100%;
+     }
+
+    `
 
     return (
       <>
-
       <BG>
-      <InfoTask><TextOne text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/><Btn linkUrl={props.linkUrl} btnText={props.btnText}/></InfoTask>
-      <InfoPic/>
+      <InfoTask><TextOne light text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/><Btn linkUrl={props.linkUrl} btnText={props.btnText}/></InfoTask>
+      <Div><Pic src={props.src}/></Div>
       </BG>
-
-
       </>
       )
   }

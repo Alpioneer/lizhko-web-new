@@ -38,6 +38,7 @@ const Home =()=>{
     return(
 
         <>
+
         <VideoWrapper>
 
 
@@ -63,7 +64,12 @@ const Home =()=>{
 
         </VideoWrapper>
 
+
+
+
         </>
+
+
         
     )
     
