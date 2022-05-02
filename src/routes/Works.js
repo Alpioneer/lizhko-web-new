@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import DividedBanner from "components/DividedBannerTwo";
+import DividedBanner from "components/DividedBanner";
 import BandText from "components/BandText";
 import d1 from "images/works/d1.png"
 import d2 from "images/works/d2.png"

@@ -2,16 +2,23 @@ import React from "react";
 import styled from "styled-components";
 
 
-const InterfaceDesignListTwo =()=>{
+const UXdesign =()=>{
+
     const Null=styled.div`
+
+    width:100%;
+    height:100%;
+    background:blue;
+    color:white;
+
     `
     return(
 
         <>
-        <Null>Page one</Null>
+        <Null>UX</Null>
         </>
     )
     
 }
 
-export default InterfaceDesignListTwo;
+export default UXdesign;

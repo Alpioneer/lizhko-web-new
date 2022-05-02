@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ReactPlayer from "react-player";
-
-
-
+import ReactPlayer from 'react-player'
 
 const Home =()=>{
 
@@ -21,10 +18,6 @@ const Home =()=>{
     justify-content:center;
     `
 
-    const TestPlayer=styled(ReactPlayer)`
-
-
-    `
     const TestText=styled.span`
     color:white;
     font-size:20px;
@@ -33,6 +26,10 @@ const Home =()=>{
 
     `
 
+    const TestPlayer=styled(ReactPlayer)`
+    
+    `
+    
     /* https://codingbroker.tistory.com/18*/
 
     return(

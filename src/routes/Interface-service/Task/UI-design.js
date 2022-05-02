@@ -2,19 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 
-const InterfaceDesignListTwo =()=>{
+const UIdesign =()=>{
 
     const Null=styled.div`
 
-
+    width:100%;
+    height:100%;
+    
     `
     return(
 
         <>
-        <Null>Page one</Null>
+        <Null>UIdesign이야</Null>
         </>
     )
     
 }
 
-export default InterfaceDesignListTwo;
+export default UIdesign;

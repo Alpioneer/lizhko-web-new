@@ -4,22 +4,10 @@ import TextOne from "./TextOne";
 import TextRegular from "./TextRegular";
 import TextTwo from "./TextTwo";
 import Btn from "./Btn";
-import Lottie from "lottie-web";
-import { useRef } from "react";
+import Lottie from "react-lottie-player";
+
 
 const DividedBannerTwo = (props) => {
-
-  const lotContain = useRef(null);
-
-  Lottie.loadAnimation({
-    container: lotContain.current, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    
-  });
-
-
 
     const BG=styled.section`
     display:flex;
@@ -46,19 +34,17 @@ const DividedBannerTwo = (props) => {
     box-sizing:border-box;
     `
 
-    const Lot=styled.div`
-     &&&{
-      width:100%;
-      height:100%;
-     }
-
-    `
-
     return (
       <>
       <BG>
       <InfoTask><TextOne light text={props.name}/><TextTwo text={props.title}/><TextRegular text={props.desc}/><Btn linkUrl={props.linkUrl} btnText={props.btnText}/></InfoTask>
-      <Div><Lot ref={lotContain}/></Div>
+      <Div> <Lottie
+      loop
+      animationData={props.lottieData}
+      play
+      style={{ width: "100%", height: "100%" }}
+    /></Div>
+      
       </BG>
       </>
       )
