@@ -7,10 +7,10 @@ const TextRegular = (props)=>{
 
     const Span=styled.span`
     color: #444852;
-    font-size: 1.1em;
+    font-size: 12px;
     font-weight: 400;
-    letter-spacing: -0.07em;
-    line-height: 1.60em;
+    letter-spacing: -0.5px;
+    line-height: 14px;
     `
     
     return (<>
