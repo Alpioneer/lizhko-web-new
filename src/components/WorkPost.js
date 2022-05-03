@@ -13,8 +13,9 @@ const WorkPost = (props)=>{
 
     `
 
-   
+    console.log("what data  is", props.data.carbom.image)
 
+   
     return(
 
 
@@ -22,10 +23,11 @@ const WorkPost = (props)=>{
     <Container>
 
 
-        <TextOne light text={props.title}/>
-        <TextRegular text={props.author}/>
-        <TextRegular text={props.desc}/>
-            
+        <TextOne light text={props.data.carbom.title}/>
+        <TextRegular text={props.data.carbom.author}/>
+        <TextRegular text={props.data.carbom.desc}/>
+        <img src={props.data.carbom.image.map(x=>{return x})}/>
+   
    </Container>
     </>)
 
