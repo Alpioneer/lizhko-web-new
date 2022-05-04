@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TextOne from "./TextOne";
 import TextRegular from "./TextRegular";
+import ReactPlayer from "react-player";
 
 
 const WorkPost = (props)=>{
@@ -32,6 +33,25 @@ const WorkPost = (props)=>{
     box-shadow: 0px 4px 20px rgba(92, 128, 255, 0.1);
 
 
+    `
+
+
+    const CustomIframe =styled.iframe`
+
+    width:414px;
+    height:896px;
+    
+    `
+    
+
+    const WorkVideo=styled(ReactPlayer)`
+
+
+    margin:20px 0;
+    border-radius:4px;
+    box-shadow: 0px 4px 20px rgba(92, 128, 255, 0.1);
+    
+    
     `
     /*    
     
@@ -75,6 +95,27 @@ const WorkPost = (props)=>{
 <FlexContainer>
 
 {props.data.image.map(x=>(<Img src={x}/>))}
+{props.data.video.map(x=>(<WorkVideo 
+
+className='react-player'
+url={x}
+width='100%'
+height="600px"
+muted='true'
+playing='true'
+loop='true'
+
+/>))}
+
+
+{props.data.figma.map(x=>(<CustomIframe
+
+src={x}
+frameborder="0" 
+allowfullscreen=""
+
+/>))}
+
 
 </FlexContainer>
 
