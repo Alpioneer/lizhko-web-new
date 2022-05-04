@@ -24,17 +24,6 @@ const UIdesign =()=>{
  */
 
 
-    const dummy={
-
-        "images":[
-            carbom1,carbom2,carbom3,carbom4
-        ]
-
-        }
-        
-
-        console.log("what this map?",dummy.images.map(x=>{return x}));
-
         const dummy2={
  
        "carbom":{

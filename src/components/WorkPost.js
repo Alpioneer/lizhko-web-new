@@ -7,15 +7,21 @@ import TextRegular from "./TextRegular";
 const WorkPost = (props)=>{
 
     const Container = styled.div`
+
     padding:60px 10vw;
     width:100%;
+
       }
 
     `
 
-    console.log("what data  is", props.data.carbom.image)
+    const Img =styled.img`
+    
+    width:50%;
+    height:50%;
 
-   
+    `
+
     return(
 
 
@@ -26,7 +32,7 @@ const WorkPost = (props)=>{
         <TextOne light text={props.data.carbom.title}/>
         <TextRegular text={props.data.carbom.author}/>
         <TextRegular text={props.data.carbom.desc}/>
-        <img src={props.data.carbom.image.map(x=>{return x})}/>
+        {props.data.carbom.image.map(x=>(<Img src={x}/>))}
    
    </Container>
     </>)
