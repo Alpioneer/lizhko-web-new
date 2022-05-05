@@ -25,7 +25,7 @@ const UXdesign =()=>{
          초기 서비스 기획에 대한 디렉팅을 진행하였으며, BI를 제작하였습니다. 제작되어진 BI와 일관성있는 UI 디자인을 제공하였으며, 페르소나 방법론, 스프린트를 적용하여, UI를 디벨롭 하였습니다. 인터랙션 프로토타입을 제작하여, 투자 유치 작업에 도움을 드렸고, 디자인 가이드를 제작하였습니다.`,
          image:[celtrion1,celtrion2,celtrion3],
          video:[],
-         figma:["https://xd.adobe.com/embed/aa486698-8ff2-450e-9bc5-05e10f3b6b8f-ff1b/"]
+         protolink:["https://xd.adobe.com/embed/aa486698-8ff2-450e-9bc5-05e10f3b6b8f-ff1b/"]
    
      }
      

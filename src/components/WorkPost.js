@@ -38,8 +38,13 @@ const WorkPost = (props)=>{
 
     const CustomIframe =styled.iframe`
 
+    margin-top:60px;
     width:414px;
     height:896px;
+    border-radius:4px;
+    box-shadow: 0px 4px 20px rgba(92, 128, 255, 0.1);
+    border:none;
+    
     
     `
     
@@ -108,7 +113,8 @@ loop='true'
 />))}
 
 
-{props.data.figma.map(x=>(<CustomIframe
+
+{props.data.protolink.map(x=>(<CustomIframe
 
 src={x}
 frameborder="0" 
