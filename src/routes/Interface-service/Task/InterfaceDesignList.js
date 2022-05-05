@@ -3,13 +3,38 @@ import DividedBannerTwo from "components/DividedBannerTwo";
 import InterfaceV from 'images/lottie/InterfaceV.json'
 import PrototypingV from 'images/lottie/PrototypingV.json'
 import UxV from 'images/lottie/UxV.json'
+import ReactPlayer from "react-player";
+import styled from "styled-components";
+import mainbanner from "images/mainbanner.mp4"
+
 
 
 const InterfaceDesignList =()=>{
 
+
+  const TestPlayer=styled(ReactPlayer)`
+
+
+  border:1px solid red;
+  
+  `
+
     return(
 
         <>
+
+<TestPlayer
+
+className='react-player'
+url={mainbanner}
+width='100%'
+muted='true'
+playing='true'
+loop='true'
+
+
+/>
+
 
     <DividedBannerTwo left lottieData={InterfaceV} btnText={`리스트 확인`} linkUrl={'/Interface-service/UI-design'}  name={"인터페이스 디자인 /  Interface Design"} desc={`오르도 스튜디오는 인터랙션관점의 디스플레이 그 자체의 디자인의 본질을 둡니다. 단순히 '예쁘게' , '어떠한 느낌의'와 같은 키워드는 오르도 스튜디오 내에서는 가장 지양되어지는 작업 태도입니다.
 소프트웨어 파워가 가지는 상호작용의 관점에서, 고객과 사용자의 서로간의 의도가 효율적으로 전달되는 메세지, 그 자체의 기능에 우리는 집중합니다.`}/>

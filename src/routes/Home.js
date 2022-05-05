@@ -2,17 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import ReactPlayer from 'react-player'
 
+
 const Home =()=>{
 
 
     const VideoWrapper= styled.div`
     width:100%;
+    margin-bottom:40px;
 
     `
     const TextWrapper =styled.section`
     position:absolute;
     width:100%;
-    height:600px;
+    height:50%;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -20,14 +22,15 @@ const Home =()=>{
 
     const TestText=styled.span`
     color:white;
-    font-size:20px;
+    font-size:16px;
     text-align:center;
     z-index:1;
 
     `
 
     const TestPlayer=styled(ReactPlayer)`
-    
+
+
     `
     
     /* https://codingbroker.tistory.com/18*/
@@ -49,9 +52,9 @@ const Home =()=>{
 <TestPlayer
 
           className='react-player'
-          url='https://www.youtube.com/watch?v=O2vrsK5um9w'
+          url="https://files.cargocollective.com/c1220919/lizhko-vd-r.mp4"
           width='100%'
-          height="600px"
+          height='50%'
           muted='true'
           playing='true'
           loop='true'
