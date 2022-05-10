@@ -12,16 +12,27 @@ import mainbanner from "images/mainbanner.mp4"
 const InterfaceDesignList =()=>{
 
 
-  const TestPlayer=styled(ReactPlayer)`
+  const VideoWrapper=styled.section`
 
-
-  border:1px solid red;
+  border:1px solid blue;
+  width: 100%;
+  height: 100%;
   
+  `
+
+
+  const TestPlayer=styled(ReactPlayer)`
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
   `
 
     return(
 
         <>
+
+<VideoWrapper>
+
 
 <TestPlayer
 
@@ -34,6 +45,9 @@ loop='true'
 
 
 />
+
+
+</VideoWrapper>
 
 
     <DividedBannerTwo left lottieData={InterfaceV} btnText={`리스트 확인`} linkUrl={'/Interface-service/UI-design'}  name={"인터페이스 디자인 /  Interface Design"} desc={`오르도 스튜디오는 인터랙션관점의 디스플레이 그 자체의 디자인의 본질을 둡니다. 단순히 '예쁘게' , '어떠한 느낌의'와 같은 키워드는 오르도 스튜디오 내에서는 가장 지양되어지는 작업 태도입니다.
